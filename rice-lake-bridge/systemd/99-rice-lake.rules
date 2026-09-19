@@ -1,0 +1,3 @@
+# Nombre fijo para el adaptador USB-RS232, para que no baile entre ttyUSB0/1.
+# Ajusta idVendor/idProduct con: udevadm info -a -n /dev/ttyUSB0 | head -40
+SUBSYSTEM=="tty", ATTRS{idVendor}=="0403", ATTRS{idProduct}=="6001", SYMLINK+="ttyBascula", GROUP="dialout", MODE="0660"

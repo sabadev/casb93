@@ -1,0 +1,25 @@
+[Unit]
+Description=Puente Rice Lake 480 Legend -> backend de pesajes
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=bridge
+Group=dialout
+WorkingDirectory=/opt/rice-lake-bridge
+EnvironmentFile=/opt/rice-lake-bridge/.env
+ExecStart=/opt/rice-lake-bridge/.venv/bin/python -m bridge.main run
+Restart=always
+RestartSec=5
+
+# El servicio solo necesita su directorio de datos y el puerto serie.
+StateDirectory=rice-lake-bridge
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/rice-lake-bridge
+
+[Install]
+WantedBy=multi-user.target
