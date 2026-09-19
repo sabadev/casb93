@@ -1,0 +1,8 @@
+# Puente (equipo en la bascula)
+pyserial>=3.5
+httpx>=0.27
+
+# Backend de referencia (no hace falta en el equipo de la bascula)
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6

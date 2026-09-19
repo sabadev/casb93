@@ -1,0 +1,16 @@
+[Unit]
+Description=Backend receptor de pesajes
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=bridge
+WorkingDirectory=/opt/rice-lake-bridge
+EnvironmentFile=/opt/rice-lake-bridge/.env
+ExecStart=/opt/rice-lake-bridge/.venv/bin/uvicorn backend.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
