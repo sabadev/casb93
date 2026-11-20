@@ -102,6 +102,15 @@ Para croqueta y pellet (producto de flujo libre, volumen grande, que no se debe 
 | **Una cabeza por peso** (tolva con celda de carga + alimentador vibratorio de 2 velocidades: grueso/fino) | ±0.5–1 % | ✅ **Elegida** |
 | Sinfín | — | ❌ Quiebra la croqueta |
 
+**Alternativa evaluada: dosificar "por altura" (nivel).** Descartada para producción: mide volumen, no peso;
+la densidad varía por lote/humedad/finos (±5–10 %), la bolsa es opaca y queda dentro de las mordazas (no hay dónde
+leer el nivel), y medir en el tubo apoyaría producto sobre el sello. Ejemplo (supuestos): variación ±7 % con
+tolerancia de −1.5 % obliga a ~55 g de regalo por bolsa vs ~10 g con báscula (~450 kg/mes por cada 10,000 bolsas).
+**Uso permitido:** vaso volumétrico ajustable + báscula de mesa en las Fases 2–3 solo para probar la mecánica.
+
+La "pre-báscula" ES esta opción: pesa mientras la máquina sella y jala, y descarga al tubo cuando la bolsa está lista.
+Si hace falta más velocidad se agrega una segunda báscula en alternancia.
+
 - Tolva de pesaje de **≥ 4–5 L** (1 kg de croqueta ≈ 2.5 L), con compuerta neumática de apertura rápida.
 - Alimentador vibratorio con **canal tipo charola** y descarga suave (no dejar caer desde mucha altura).
 - Se pesa en neto por bolsa; el límite de velocidad es el dosificador (pesar + descargar en < 4 s en croqueta).
