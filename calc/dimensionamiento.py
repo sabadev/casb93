@@ -2,7 +2,7 @@
 """Dimensionamiento preliminar de envasadora vertical (VFFS) para ~1 kg.
 
 Todos los parámetros se pueden cambiar por línea de comandos, p. ej.:
-    python3 calc/dimensionamiento.py --densidad 0.5 --ancho-bolsa 200 --bpm 15
+    python3 calc/dimensionamiento.py --producto croqueta --bpm 15
 
 Son estimaciones de ingeniería para arrancar el diseño; se validan con las
 pruebas de docs/plan-de-pruebas.md. No sustituyen el ensayo con producto real.
@@ -13,9 +13,10 @@ import math
 
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("--producto", choices=["croqueta", "pellet"], help="atajo: croqueta=0.40 kg/L, pellet=0.65 kg/L")
     p.add_argument("--neto", type=float, default=1.0, help="peso neto por bolsa [kg]")
-    p.add_argument("--densidad", type=float, default=0.70, help="densidad a granel del producto [kg/L]")
-    p.add_argument("--ancho-bolsa", type=float, default=175, help="ancho de bolsa plana, sello a sello [mm]")
+    p.add_argument("--densidad", type=float, default=None, help="densidad a granel del producto [kg/L]")
+    p.add_argument("--ancho-bolsa", type=float, default=200, help="ancho de bolsa plana, sello a sello [mm]")
     p.add_argument("--sello", type=float, default=10, help="ancho de cada sello transversal [mm]")
     p.add_argument("--aleta", type=float, default=10, help="traslape del sello vertical (aleta) [mm]")
     p.add_argument("--espacio-libre", type=float, default=20, help="aire sobre el producto dentro de la bolsa [mm]")
@@ -25,6 +26,8 @@ def main():
     p.add_argument("--presion-sello", type=float, default=0.40, help="presión de sello objetivo [N/mm2]")
     p.add_argument("--aire", type=float, default=5.0, help="presión de aire de trabajo [bar]")
     a = p.parse_args()
+    if a.densidad is None:
+        a.densidad = {"croqueta": 0.40, "pellet": 0.65}.get(a.producto, 0.40)
 
     print("=== 1. Volumen y geometría de bolsa ===")
     vol_prod = a.neto / a.densidad  # litros
@@ -40,7 +43,7 @@ def main():
     ancho_pelicula = 2 * W + a.aleta
     d_tubo = (ancho_pelicula - a.aleta) / math.pi
     print(f"Ancho de película (bobina): {ancho_pelicula:.0f} mm")
-    print(f"Diámetro exterior del tubo formador: {d_tubo:.0f} mm (comercial más cercano: 4\" = 101.6 / 4.5\" = 114.3 mm)")
+    print(f"Diámetro exterior del tubo formador: {d_tubo:.0f} mm (comerciales: 4\" = 101.6 / 4.5\" = 114.3 / 5\" = 127 mm)")
 
     print("\n=== 2. Bobina de película ===")
     od, core = 300.0, 76.0

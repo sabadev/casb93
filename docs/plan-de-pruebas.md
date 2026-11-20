@@ -5,7 +5,7 @@ prueba (fecha, película, temperatura, presión, tiempo, resultado) en una tabla
 la receta final de la máquina.
 
 ## Fase 0 — Datos de entrada
-- [ ] Producto: tipo, densidad a granel (pesar 1 L), tamaño de partícula, ¿polvoso/grasoso?
+- [ ] Producto: **pesar 1 L de croqueta y 1 L de pellet** (densidad a granel), medir tamaño de pieza, % de finos (tamizar una muestra), nivel de grasa en la croqueta
 - [ ] Película: tipo, ancho, espesor, **ficha técnica** (¿qué capa sella? temperatura de sello)
 - [ ] 2–3 m de película de muestra para los bancos de prueba
 - [ ] Velocidad objetivo (bolsas/min) y tamaño de bolsa deseado
@@ -22,6 +22,11 @@ cilindro; film de muestra.
   muy estrecha (±5 °C), revisar película o serrado.
 - Medir: tiempo de calentamiento a temperatura, estabilidad (±2 °C).
 
+## Fase 1b — Sello con producto real y perforación
+- Sellar películas con **croqueta y pellet reales** (con sus finos y su grasa) entre las mordazas.
+- Rodar pellet sobre la película y apretar la bolsa: ¿perfora? Comparar 90 vs 120 µm.
+- **Criterio:** 10 de 10 sellos con producto contaminado pasan prueba de apretar; 0 perforaciones al apretar bolsa de 1 kg.
+
 ## Fase 2 — Formado y jalado
 Montaje: bastidor, portabobina con freno, formador comprado, bandas de jalado con motor, sello
 vertical. Sin mordazas ni producto.
@@ -37,7 +42,8 @@ Montaje: mordazas con cilindros, cuchilla, sensores. Llenado **a mano** con arro
 
 ## Fase 4 — Dosificador por peso
 - Calibrar celda con pesas patrón.
-- **Criterio:** 30 bolsas, peso medio dentro de ±0.5 % del objetivo, desviación estándar ≤ 5 g,
+- Hacerlo **con croqueta y con pellet** (cambio de receta, misma máquina).
+- **Criterio:** 30 bolsas por producto, peso medio dentro de ±0.5 % del objetivo, desviación estándar ≤ 5 g,
   ninguna fuera de ±1.5 %.
 - Si estás en México, verificar tolerancias de contenido neto (NOM-002-SCFI / NOM-030-SCFI).
 

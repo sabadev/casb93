@@ -11,11 +11,12 @@ máquina anterior solo cuando se verifique que sirven.
 - [`calc/dimensionamiento.py`](calc/dimensionamiento.py) — calculadora paramétrica (bolsa, película, tiempos, fuerza de sello, aire)
 
 ```bash
-python3 calc/dimensionamiento.py --densidad 0.7 --ancho-bolsa 175 --bpm 20
+python3 calc/dimensionamiento.py --producto croqueta --bpm 15
+python3 calc/dimensionamiento.py --producto pellet --bpm 20
 ```
 
 ## Preguntas abiertas (cambian el diseño)
-1. **¿Qué producto es y qué densidad tiene?** (granulado, semilla, polvo…) → define dosificador y largo de bolsa.
+1. ~~Producto~~ ✅ croquetas para mascota y pellet para ganado. **Falta:** peso real de 1 L de cada uno, tamaño de pieza y si tienen mucho polvo/grasa.
 2. **¿Qué película tienes o piensas usar?** (material, ancho, espesor) → define temperaturas y ancho del formador.
 3. **¿Cuántas bolsas por minuto necesitas** y cuál es el presupuesto aproximado?
 4. **¿Qué sirve de la máquina actual?** (PLC/HMI, PIDs, cilindros, tolva, compresor).

@@ -22,13 +22,13 @@ sella la parte de arriba y corta. Es la misma arquitectura de la foto de referen
 | Parámetro | Valor de partida |
 |---|---|
 | Peso neto | 1.0 kg |
-| Producto | Granulado / semilla, densidad ~0.7 kg/L (⚠ por confirmar) |
+| Producto | **Croquetas para mascota** (~0.35–0.45 kg/L, pieza 8–15 mm, con grasa) y **pellet para ganado/granja** (~0.60–0.70 kg/L, pieza 3–8 mm, con finos/polvo). Densidades típicas: **pesar 1 L de cada uno** para confirmar |
 | Tipo de bolsa | Almohada (pillow) con sello de aleta, sin fuelle |
-| Bolsa plana | Ancho 175 mm × largo 255–340 mm según densidad ⚙ (diseñar para paso máx. 350 mm) |
-| Película | PE o laminado con capa sellante de PE, 60–90 µm, **ancho 360 mm** ⚙, núcleo 76 mm, Ø rollo máx. 300 mm |
+| Bolsa plana | **Ancho 200 mm** para ambos productos; largo ≈ **325 mm croqueta** / ≈ **215 mm pellet** ⚙ (el largo es solo un parámetro de receta; diseñar para paso máx. 380 mm) |
+| Película | Laminado con capa sellante de PE (PET/PE o BOPP/PE; PE mono solo si resiste el pellet), **90–120 µm**, **ancho 410 mm** ⚙ (una sola bobina para ambos productos), núcleo 76 mm, Ø rollo máx. 300 mm (~25 kg) |
 | Velocidad | Objetivo 20 bolsas/min (ciclo 3 s); mecánica capaz de ~40 ⚙ |
 | Alimentación | 220 V ~, aire comprimido 6–7 bar |
-| Dimensiones aprox. | 800 × 900 × 2200 mm (alto: rollo arriba, tolva, tubo y mordazas) |
+| Dimensiones aprox. | 900 × 1000 × 2300 mm (alto: rollo arriba, tolva, tubo y mordazas) |
 
 ## 3. Arquitectura (de arriba hacia abajo)
 
@@ -38,7 +38,7 @@ sella la parte de arriba y corta. Es la misma arquitectura de la foto de referen
         └──────┬────────┘
                │ camino de rodillos (3–4)
         ┌──────▼────────┐
-        │ Collarín       │  ← FORMADOR COMPRADO (collarín + tubo, Ø~111 mm)
+        │ Collarín       │  ← FORMADOR COMPRADO (collarín + tubo, Ø127 mm)
         │ formador       │
    Tolva│ ┌────────────┐ │
   + dosi│ │ Tubo de    │ │ ← el producto cae por dentro del tubo
@@ -66,8 +66,7 @@ sella la parte de arriba y corta. Es la misma arquitectura de la foto de referen
 
 ### 3.3 Formador (collarín + tubo)
 - **Es la pieza más crítica y la más difícil de fabricar bien. Se compra** matcheado al ancho de
-  película (360 mm → tubo Ø≈111 mm ⚙; el comercial más cercano es 114.3 mm, y se ajusta el ancho
-  de película a ~370 mm).
+  película (410 mm → tubo Ø≈127 mm ⚙ = **tubo comercial de 5"**, así que no hay que forzar nada).
 - Inox, interior pulido (el producto no debe atorarse).
 
 ### 3.4 Jalado de película
@@ -84,10 +83,10 @@ sella la parte de arriba y corta. Es la misma arquitectura de la foto de referen
 - Resistencia + termopar + PID propio.
 
 ### 3.6 Sello transversal + corte (mordazas)
-- 2 mordazas de aluminio, 200 mm de largo × sello de 10 mm, superficie serrada (empuja el
+- 2 mordazas de aluminio, 225 mm de largo × sello de 10–12 mm, superficie serrada (empuja el
   producto fuera del sello), cubiertas con cinta de PTFE.
 - Cada una con 2 cartuchos de 250 W + termopar + **PID + SSR** independiente (constante calor).
-- Fuerza requerida ≈ 0.3–0.4 N/mm² × 2000 mm² = **600–800 N** → cilindro **Ø63×50** por
+- Fuerza requerida ≈ 0.3–0.4 N/mm² × 2250 mm² = **700–900 N** → cilindro **Ø63×50** por
   mordaza, regulado a 3–5 bar ⚙ (Ø50 queda justo).
 - Cuchilla en una mordaza accionada por cilindro Ø16 (corta al centro del sello), con
   canal/contra-cuchilla en la otra.
@@ -95,17 +94,19 @@ sella la parte de arriba y corta. Es la misma arquitectura de la foto de referen
   sin cerrar).
 
 ### 3.7 Dosificación
-Decisión pendiente (depende del producto):
+Para croqueta y pellet (producto de flujo libre, volumen grande, que no se debe romper):
 
-| Opción | Precisión | Complejidad | Cuándo |
-|---|---|---|---|
-| Vaso volumétrico | ±2–3 % | Baja | Producto uniforme y densidad estable |
-| **Una cabeza por peso** (tolva con celda de carga + vibrador de 2 velocidades: grueso/fino) | ±0.5–1 % | Media | **Recomendada** para 1 kg |
-| Sinfín | ±1 % | Media | Polvos |
+| Opción | Precisión | Veredicto |
+|---|---|---|
+| Vaso volumétrico | ±3–5 % | ❌ Descartada: la densidad de croqueta/pellet varía por lote y humedad |
+| **Una cabeza por peso** (tolva con celda de carga + alimentador vibratorio de 2 velocidades: grueso/fino) | ±0.5–1 % | ✅ **Elegida** |
+| Sinfín | — | ❌ Quiebra la croqueta |
 
-El dosificador, no la mecánica, limita la velocidad (necesita pesar + descargar en < 3 s).
+- Tolva de pesaje de **≥ 4–5 L** (1 kg de croqueta ≈ 2.5 L), con compuerta neumática de apertura rápida.
+- Alimentador vibratorio con **canal tipo charola** y descarga suave (no dejar caer desde mucha altura).
+- Se pesa en neto por bolsa; el límite de velocidad es el dosificador (pesar + descargar en < 4 s en croqueta).
 
-### 3.8 Control
+
 - **PLC** (recomendado Schneider M221/M241, porque ya cuentas con pantalla Magelis en la
   máquina actual) + **HMI** táctil: receta (largo, temperaturas, tiempo de sello, peso).
 - 3 controladores PID de temperatura (jaw frontal, jaw trasera, barra vertical) con SSR 25 A.
@@ -166,10 +167,13 @@ Reglas de la secuencia:
 
 1. **Película equivocada** (sin capa sellante, o muy gruesa/delgada) → ninguna temperatura sirve.
    Mitigación: pedir muestra y ficha técnica del proveedor antes de diseñar el sello.
-2. **Producto polvoso o grasoso** → contamina el sello. Mitigación: serrado, más tiempo/presión,
-   posible extractor o soplado de aire en el tubo.
-3. **Formador mal calculado** → arrugas. Mitigación: comprarlo.
-4. **Velocidad ambiciosa** → empezar a 12–15 bpm y subir.
+2. **Grasa de la croqueta y finos/polvo del pellet** → contaminan el sello (causa #1 de fugas con estos
+   productos). Mitigación: serrado, sello de 12 mm, más tiempo de sello, dos pulsos de cierre, soplado de aire
+   o extracción de polvo en el tubo, y **tamizar el producto antes de la tolva**.
+3. **Pellet duro y puntiagudo perfora la película** → usar laminado de 90–120 µm; ponerlo a prueba (Fase 1b).
+4. **Rotura de croqueta** (genera más finos) → caídas cortas, vibrador suave, sin válvulas que aplasten.
+5. **Formador mal calculado** → arrugas. Mitigación: comprarlo.
+6. **Velocidad ambiciosa** → empezar a 12–15 bpm y subir (croqueta: el dosificador pesa más volumen).
 
 ## 7. Preguntas abiertas
 Ver el final de `README.md`.

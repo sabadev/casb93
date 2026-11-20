@@ -10,27 +10,27 @@ Leyenda Reusar: ✅ probable · ❓ revisar · ❌ comprar nuevo
 | Ítem | Especificación | Cant. | Reusar |
 |---|---|---|---|
 | Perfil de aluminio ranurado 40×40 + escuadras | Para bastidor del prototipo | ~20 m | ❌ |
-| Tolva de inox | Capacidad ≥ 10 L | 1 | ✅ (tolva actual) |
+| Tolva de inox | Capacidad ≥ 15 L (croqueta es voluminosa) | 1 | ✅ (tolva actual) |
 | Lámina y soportes | Inox/acero | — | ❓ |
 | Protecciones con ventana | Policarbonato o lámina, con puertas | 1 juego | ❌ |
 
 ## Película y formado
 | Ítem | Especificación | Cant. | Reusar |
 |---|---|---|---|
-| Collarín + tubo formador | Para película ~360–370 mm, tubo Ø≈111–114 mm, inox 304 | 1 | ❌ **comprar** |
-| Portabobina con freno | Núcleo 76 mm, Ø máx. 300 mm | 1 | ❌ |
-| Rodillos locos + bailarín | Aluminio/inox Ø30–40 × 400 mm | 4 + 1 | ❌ |
+| Collarín + tubo formador | Para película 410 mm, tubo Ø127 mm (5"), inox 304, interior pulido | 1 | ❌ **comprar** |
+| Portabobina con freno | Núcleo 76 mm, Ø máx. 300 mm, ~25 kg, ancho 410 mm | 1 | ❌ |
+| Rodillos locos + bailarín | Aluminio/inox Ø30–40 × 450 mm | 4 + 1 | ❌ |
 | Bandas de jalado | Silicón/hule 40 mm × ~250 mm | 2 | ❌ |
 
 ## Sellado
 | Ítem | Especificación | Cant. | Reusar |
 |---|---|---|---|
-| Mordazas de aluminio | 200 mm largo, sello 10 mm serrado, ranura para cuchilla | 2 | ❌ (maquinar) |
+| Mordazas de aluminio | 225 mm largo, sello 10–12 mm serrado, ranura para cuchilla | 2 | ❌ (maquinar) |
 | Cartuchos calefactores | Ø10 × 100–150 mm, 250 W, 220 V | 4 | ❌ |
 | Termopar tipo K (o J) | Para cada mordaza | 2 | ❌ |
-| Barra de sello vertical | 10 × 200 mm + cartucho 250 W + termopar | 1 | ❌ |
+| Barra de sello vertical | 10 × 225 mm + cartucho 250 W + termopar | 1 | ❌ |
 | Cinta PTFE adhesiva | Alta temperatura, 0.13 mm | 1 rollo | ❌ |
-| Cuchilla serrada | Acero inox, ~200 mm | 2 | ❌ |
+| Cuchilla serrada | Acero inox, ~225 mm | 2 | ❌ |
 | Guías lineales | Para cada mordaza (carrera ~50 mm) | 4 | ❓ |
 
 ## Neumática
@@ -48,10 +48,12 @@ Leyenda Reusar: ✅ probable · ❓ revisar · ❌ comprar nuevo
 ## Dosificación
 | Ítem | Especificación | Cant. | Reusar |
 |---|---|---|---|
-| Tolva de pesaje | Inox ~3–4 L con compuerta neumática | 1 | ❌ |
+| Tolva de pesaje | Inox ≥ 4–5 L con compuerta neumática de apertura rápida | 1 | ❌ |
 | Celda de carga | 5–10 kg, clase C3 o mejor | 1 | ❌ |
 | Transmisor de peso | 24 bits, Modbus RTU | 1 | ❌ |
-| Alimentador vibratorio | 2 velocidades (grueso/fino) | 1 | ❌ |
+| Alimentador vibratorio | Charola, 2 velocidades (grueso/fino), descarga suave | 1 | ❌ |
+| Criba/tamiz de finos | Antes de la tolva (quita polvo del pellet) | 1 | ❌ |
+| Soplador de aire o extracción de polvo | En zona de sello | 1 | ❌ |
 
 ## Electricidad y control
 | Ítem | Especificación | Cant. | Reusar |
